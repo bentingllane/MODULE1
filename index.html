@@ -14,7 +14,16 @@
     <section class="login-brand">
       <div class="brand-row brand-row-light">
         <span class="logo logo-outline" aria-hidden="true">
-          <svg viewBox="0 0 24 24"><path d="M8 3h8v4h4v14H4V7h4V3Z"/><path d="M10 7h4"/><path d="M12 5v4"/><path d="M9 13h6"/><path d="M12 10v6"/></svg>
+          <svg viewBox="0 0 24 24">
+            <path d="M6 21V5a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v16"/>
+            <path d="M4 21h16"/>
+            <path d="M9 8h6"/>
+            <path d="M12 5v6"/>
+            <path d="M9 14h2"/>
+            <path d="M13 14h2"/>
+            <path d="M9 18h2"/>
+            <path d="M13 18h2"/>
+          </svg>
         </span>
         <div>
           <h1>Wellmeadows Hospital</h1>
@@ -22,20 +31,17 @@
         </div>
       </div>
 
-      <div class="care-copy hospital-welcome">
+      <div class="hospital-welcome">
         <h2>Welcome to Wellmeadows Hospital</h2>
         <p>
-          Welcome to Wellmeadows Hospital, where every patient is treated with compassion,
-          respect, and personalized care. Our mission is to create a safe and supportive
-          environment where healing begins the moment you walk through our doors.
+          Wellmeadows Hospital is located in Edinburgh and specializes in health care
+          for elderly people. This system supports patients, staff, wards, appointments,
+          medications, and supply requisitions.
         </p>
         <p>
-          Through this system, we ensure smooth and organized healthcare services—from
-          patient information management to appointment scheduling—allowing our medical
-          team to focus more on what truly matters: your health and well-being.
-        </p>
-        <p>
-          Because at Wellmeadows Hospital, your life and health will always be our top priority.
+          The sample records follow the Wellmeadows Hospital case study, including
+          Ward 11 Orthopaedic, Moira Samuel, Anne Phelps, Robert MacDonald,
+          medication reports, and requisition records.
         </p>
       </div>
 
@@ -45,10 +51,20 @@
     <section class="login-panel-wrap">
       <form class="login-card" id="authForm">
         <span class="login-card-logo" aria-hidden="true">
-          <svg viewBox="0 0 24 24"><path d="M8 3h8v4h4v14H4V7h4V3Z"/><path d="M10 7h4"/><path d="M12 5v4"/><path d="M9 13h6"/><path d="M12 10v6"/></svg>
+          <svg viewBox="0 0 24 24">
+            <path d="M6 21V5a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v16"/>
+            <path d="M4 21h16"/>
+            <path d="M9 8h6"/>
+            <path d="M12 5v6"/>
+            <path d="M9 14h2"/>
+            <path d="M13 14h2"/>
+            <path d="M9 18h2"/>
+            <path d="M13 18h2"/>
+          </svg>
         </span>
-        <h2 id="authTitle">Create Account</h2>
-        <p id="authSubtitle">Register for staff access</p>
+
+        <h2 id="authTitle">WELCOME TO WELLMEADOWS HOSPITAL</h2>
+        <p id="authSubtitle">Sign in to your account</p>
 
         <div class="auth-name-grid register-only">
           <label>
@@ -108,9 +124,9 @@
         </div>
 
         <p class="auth-message" id="authMessage"></p>
-        <button class="primary-btn" id="authSubmit" type="submit">Create Account</button>
-        <p class="register-copy" id="authSwitchText">Already have an account? <a href="#" id="authSwitch">Sign In</a></p>
-        <p class="demo-copy">Demo credentials: any email/password combination</p>
+        <button class="primary-btn" id="authSubmit" type="submit">Sign In</button>
+        <p class="register-copy" id="authSwitchText">Don't have an account? <a href="#" id="authSwitch">Create Account</a></p>
+        <p class="demo-copy">Create an account first, then use that email and password to sign in.</p>
       </form>
     </section>
   </main>
@@ -119,8 +135,17 @@
     <aside class="sidebar">
       <div class="brand-row">
         <span class="logo" aria-hidden="true">
-          <svg viewBox="0 0 24 24"><path d="M8 3h8v4h4v14H4V7h4V3Z"/><path d="M10 7h4"/><path d="M12 5v4"/><path d="M9 13h6"/><path d="M12 10v6"/></svg>
-        </span>
+  <svg viewBox="0 0 24 24">
+    <path d="M6 21V5a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v16"/>
+    <path d="M4 21h16"/>
+    <path d="M9 8h6"/>
+    <path d="M12 5v6"/>
+    <path d="M9 14h2"/>
+    <path d="M13 14h2"/>
+    <path d="M9 18h2"/>
+    <path d="M13 18h2"/>
+  </svg>
+</span>
         <div>
           <h1>Wellmeadows</h1>
           <p>Hospital System</p>
@@ -144,6 +169,7 @@
           <p id="sidebarRole">Medical Director</p>
         </div>
       </div>
+
       <button class="logout-btn" id="logoutBtn"><svg viewBox="0 0 24 24"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><path d="m16 17 5-5-5-5"/><path d="M21 12H9"/></svg> Logout</button>
     </aside>
 
@@ -157,10 +183,10 @@
         </header>
 
         <section class="stat-grid">
-          <article class="stat-card"><div><span>Total Patients</span><strong>186</strong><small>+12</small></div><b class="stat-icon blue"><svg viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-8 0v2"/><circle cx="12" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/></svg></b></article>
+          <article class="stat-card"><div><span>Total Patients</span><strong>186</strong><small>+12</small></div><b class="stat-icon blue"><svg viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-8 0v2"/><circle cx="12" cy="7" r="4"/></svg></b></article>
           <article class="stat-card"><div><span>Occupied Beds</span><strong>203/240</strong><small>84%</small></div><b class="stat-icon green"><svg viewBox="0 0 24 24"><path d="M3 7v11"/><path d="M21 7v11"/><path d="M3 14h18"/><path d="M7 14V9h10v5"/></svg></b></article>
-          <article class="stat-card"><div><span>Today's Appointments</span><strong>24</strong><small>+3</small></div><b class="stat-icon purple"><svg viewBox="0 0 24 24"><path d="M8 2v4"/><path d="M16 2v4"/><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M3 10h18"/></svg></b></article>
-          <article class="stat-card"><div><span>Staff on Duty</span><strong>142</strong><small>95%</small></div><b class="stat-icon orange"><svg viewBox="0 0 24 24"><circle cx="9" cy="7" r="4"/><path d="M17 11h4"/><path d="M19 9v4"/><path d="M3 21v-2a4 4 0 0 1 4-4h4"/></svg></b></article>
+          <article class="stat-card"><div><span>Today's Appointments</span><strong>24</strong><small>+3</small></div><b class="stat-icon purple"><svg viewBox="0 0 24 24"><path d="M8 2v4"/><path d="M16 2v4"/><rect x="3" y="4" width="18" height="18" rx="2"/></svg></b></article>
+          <article class="stat-card"><div><span>Staff on Duty</span><strong>142</strong><small>95%</small></div><b class="stat-icon orange"><svg viewBox="0 0 24 24"><circle cx="9" cy="7" r="4"/><path d="M17 11h4"/><path d="M19 9v4"/></svg></b></article>
         </section>
 
         <section class="dashboard-layout">
@@ -179,11 +205,11 @@
           <aside>
             <h3>Recent Activity</h3>
             <div class="activity-card">
-              <article><strong>New patient registered</strong><span>Anne Phelps</span><small>10 mins ago</small></article>
-              <article><strong>Medication prescribed</strong><span>Robert MacDonald</span><small>25 mins ago</small></article>
-              <article><strong>Ward transfer completed</strong><span>David Black</span><small>1 hour ago</small></article>
-              <article><strong>Supply requisition approved</strong><span>Ward 11 - Orthopaedic</span><small>2 hours ago</small></article>
-              <article><strong>Staff shift updated</strong><span>Moira Samuel</span><small>3 hours ago</small></article>
+              <article><strong>New patient registered</strong><span>Anne Phelps</span><small>21-Feb-95</small></article>
+              <article><strong>Medication prescribed</strong><span>Robert MacDonald</span><small>24-Mar-96</small></article>
+              <article><strong>Ward allocation updated</strong><span>Ward 11 - Orthopaedic</span><small>16-Jan-96</small></article>
+              <article><strong>Supply requisition approved</strong><span>Ward 11 - Orthopaedic</span><small>15-Feb-96</small></article>
+              <article><strong>Staff shift updated</strong><span>Moira Samuel</span><small>9-Jan-96</small></article>
             </div>
           </aside>
         </section>
@@ -228,14 +254,7 @@
         </section>
       </div>
 
-      <div id="placeholderPage" class="page hidden">
-        <header class="page-header">
-          <div>
-            <h2 id="placeholderTitle">Module</h2>
-            <p>This module is ready for the next set of records.</p>
-          </div>
-        </header>
-      </div>
+      <div id="placeholderPage" class="page hidden"></div>
     </section>
   </main>
 

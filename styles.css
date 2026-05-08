@@ -64,9 +64,7 @@ svg {
   min-width: 0;
 }
 
-.brand-row > div {
-  min-width: 0;
-}
+.brand-row > div { min-width: 0; }
 
 .brand-row h1 {
   margin: 0;
@@ -89,8 +87,8 @@ svg {
 .brand-row-light p { color: rgba(255,255,255,.88); }
 
 .logo {
-  width: 38px;
-  height: 38px;
+  width: 40px;
+  height: 40px;
   display: grid;
   place-items: center;
   flex: 0 0 auto;
@@ -99,26 +97,16 @@ svg {
   border-radius: 10px;
 }
 
-.logo svg {
-  width: 30px;
-  height: 30px;
-}
+.logo svg { width: 30px; height: 30px; }
 
 .logo-outline {
   background: transparent;
   color: #fff;
 }
 
-.logo-outline svg {
-  width: 36px;
-  height: 36px;
-}
+.logo-outline svg { width: 36px; height: 36px; }
 
-.care-copy { max-width: 870px; }
-
-.hospital-welcome {
-  max-width: 760px;
-}
+.hospital-welcome { max-width: 760px; }
 
 .hospital-welcome h2 {
   margin: 0 0 24px;
@@ -171,15 +159,12 @@ svg {
   border-radius: 50%;
 }
 
-.login-card-logo svg {
-  width: 34px;
-  height: 34px;
-}
+.login-card-logo svg { width: 34px; height: 34px; }
 
 .login-card h2 {
   margin: 0 0 10px;
   text-align: center;
-  font-size: 26px;
+  font-size: 24px;
 }
 
 .login-card > p {
@@ -214,10 +199,7 @@ svg {
   background: #fff;
 }
 
-.input-shell svg {
-  width: 20px;
-  height: 20px;
-}
+.input-shell svg { width: 20px; height: 20px; }
 
 .input-shell input {
   width: 100%;
@@ -265,6 +247,7 @@ a {
   align-items: center;
   justify-content: center;
   gap: 10px;
+  padding: 0 18px;
   border: 0;
   border-radius: 8px;
   color: #fff;
@@ -307,20 +290,39 @@ a {
 }
 
 .sidebar > .brand-row {
+  min-height: 100px;
+  padding: 22px 18px;
+  border-bottom: 1px solid var(--line);
+}
+
+.sidebar .brand-row {
+  gap: 12px;
+}
+
+.sidebar .brand-row h1 {
+  max-width: none;
+  overflow: visible;
+  text-overflow: clip;
+  white-space: nowrap;
+  font-size: 25px;
+}
+
+.sidebar .brand-row p {
+  max-width: none;
+  overflow: visible;
+  text-overflow: clip;
+  white-space: nowrap;
+}
+
+.sidebar > .brand-row {
   min-height: 94px;
   padding: 20px 18px;
   border-bottom: 1px solid var(--line);
 }
 
-.sidebar .brand-row h1 {
-  max-width: 200px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-
+.sidebar .brand-row h1,
 .sidebar .brand-row p {
-  max-width: 200px;
+  max-width: 170px;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -328,8 +330,8 @@ a {
 
 .side-nav {
   display: grid;
-  gap: 4px;
-  padding: 60px 12px 16px;
+  gap: 6px;
+  padding: 18px 12px;
 }
 
 .nav-item {
@@ -397,21 +399,22 @@ a {
   cursor: pointer;
 }
 
-.logout-btn svg {
-  width: 20px;
-  height: 20px;
-}
+.logout-btn svg { width: 20px; height: 20px; }
 
 .content {
   min-width: 0;
-  padding: 28px clamp(24px, 4vw, 64px);
+  padding: 28px clamp(24px, 4vw, 56px);
 }
 
-.page { max-width: 1220px; margin: 0 auto; }
+.page {
+  max-width: 1220px;
+  margin: 0 auto;
+}
 
 .page-header {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   gap: 24px;
   margin-bottom: 26px;
 }
@@ -433,8 +436,12 @@ a {
   margin-bottom: 28px;
 }
 
+.ward-stats {
+  grid-template-columns: repeat(3, 1fr);
+}
+
 .stat-card {
-  min-height: 130px;
+  min-height: 96px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -459,10 +466,7 @@ a {
   color: #fff;
 }
 
-.stat-icon svg {
-  width: 25px;
-  height: 25px;
-}
+.stat-icon svg { width: 25px; height: 25px; }
 
 .blue { background: #2563eb; }
 .green { background: #08b94e; }
@@ -502,7 +506,8 @@ a {
 .module-card p { margin: 0 0 16px; color: #1e293b; }
 .module-card small { margin-top: auto; color: #475569; }
 
-.activity-card, .table-card {
+.activity-card,
+.table-card {
   border: 1px solid var(--line);
   border-radius: 14px;
   background: #fff;
@@ -548,7 +553,8 @@ a {
   background: transparent;
 }
 
-select {
+select,
+input[type="date"] {
   height: 46px;
   padding: 0 14px;
   border: 1px solid #cbd5e1;
@@ -571,8 +577,6 @@ th, td {
   vertical-align: middle;
   font-size: 14px;
 }
-
-tbody tr:nth-child(4) { background: #f8fafc; }
 
 .patient-name {
   display: flex;
@@ -623,6 +627,241 @@ tbody tr:nth-child(4) { background: #f8fafc; }
 }
 
 .icon-button.edit { color: #64748b; }
+
+.ward-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.ward-card {
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 2px 4px rgba(15,23,42,.12);
+}
+
+.ward-card header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  min-height: 108px;
+  padding: 26px 24px;
+  color: #fff;
+  background: linear-gradient(120deg, #2f80ff, #1557ff);
+}
+
+.ward-card header h3 {
+  margin: 0 0 8px;
+  font-size: 25px;
+  line-height: 1;
+}
+
+.ward-card header p {
+  margin: 0;
+  font-size: 16px;
+}
+
+.ward-card header span {
+  min-height: 28px;
+  padding: 6px 13px;
+  border-radius: 999px;
+  background: rgba(255,255,255,.18);
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.ward-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  padding: 24px 24px 18px;
+  border-bottom: 1px solid #eef2f7;
+}
+
+.ward-info small,
+.ward-bottom small {
+  display: block;
+  color: #475569;
+  font-size: 12px;
+}
+
+.ward-info strong {
+  display: block;
+  margin-top: 6px;
+}
+
+.ward-info p {
+  margin: 4px 0 0;
+  color: #64748b;
+  font-size: 12px;
+}
+
+.occupancy {
+  padding: 18px 24px;
+  border-bottom: 1px solid #eef2f7;
+}
+
+.occupancy div {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.occupancy-track {
+  display: block;
+  height: 8px;
+  overflow: hidden;
+  border-radius: 999px;
+  background: #e5e7eb;
+}
+
+.occupancy-fill {
+  display: block;
+  height: 100%;
+  border-radius: 999px;
+  background: #ff5b05;
+}
+
+.occupancy-fill.danger { background: #f1122a; }
+.occupancy-fill.warning { background: #ff5b05; }
+
+.occupancy small {
+  display: block;
+  margin-top: 8px;
+  color: #475569;
+  font-size: 12px;
+}
+
+.ward-bottom {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  padding: 16px 24px 24px;
+}
+
+.ward-bottom > div {
+  display: grid;
+  grid-template-columns: 40px 1fr;
+  column-gap: 10px;
+  align-items: center;
+}
+
+.ward-bottom strong { grid-column: 2; }
+
+.mini-icon {
+  width: 40px;
+  height: 40px;
+  display: grid;
+  grid-row: span 2;
+  place-items: center;
+  border-radius: 9px;
+  color: #fff;
+}
+
+.one-line { grid-template-columns: 1fr; }
+
+.modern-list,
+.appointment-list,
+.requisition-list {
+  display: grid;
+  gap: 12px;
+}
+
+.modern-row,
+.appointment-row,
+.requisition-row {
+  display: grid;
+  align-items: center;
+  gap: 18px;
+  padding: 16px 18px;
+  border: 1px solid var(--line);
+  border-radius: 9px;
+  background: #fff;
+}
+
+.modern-row { grid-template-columns: 1.5fr 1fr auto auto; }
+
+.modern-row p,
+.modern-row small,
+.appointment-row p,
+.appointment-row span,
+.requisition-row p,
+.requisition-row small {
+  margin: 5px 0 0;
+  color: #475569;
+}
+
+.link-btn {
+  border: 0;
+  color: var(--blue);
+  background: transparent;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.link-btn.dark { color: #334155; }
+
+.appointment-toolbar {
+  display: grid;
+  grid-template-columns: 1fr 172px;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.appointment-row {
+  grid-template-columns: 48px 1.4fr 1fr 1fr auto auto;
+}
+
+.appointment-row > b {
+  width: 48px;
+  height: 48px;
+  display: grid;
+  place-items: center;
+  border-radius: 9px;
+  color: #fff;
+  background: linear-gradient(135deg, #3b82f6, #9333ea);
+}
+
+.appointment-row strong {
+  margin-right: 8px;
+  font-size: 18px;
+}
+
+.appointment-row em {
+  margin-left: 10px;
+  padding: 5px 12px;
+  border-radius: 999px;
+  color: #1557ff;
+  background: #dbeafe;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 800;
+}
+
+.appointment-row em.orange-status {
+  color: #d9480f;
+  background: #ffedd5;
+}
+
+.requisition-row {
+  grid-template-columns: 1fr auto;
+}
+
+.requisition-row h3 {
+  display: inline-block;
+  margin: 0 10px 8px 0;
+}
+
+.requisition-row > div:last-child {
+  text-align: right;
+}
+
+.requisition-row > div:last-child strong {
+  display: block;
+  margin-top: 6px;
+}
 
 .modal {
   position: fixed;
@@ -677,10 +916,7 @@ tbody tr:nth-child(4) { background: #f8fafc; }
   gap: 16px;
 }
 
-.form-grid label {
-  display: grid;
-  gap: 8px;
-}
+.form-grid label { display: grid; gap: 8px; }
 
 .form-grid label span {
   color: #334155;
@@ -688,7 +924,9 @@ tbody tr:nth-child(4) { background: #f8fafc; }
   font-weight: 800;
 }
 
-.form-grid input, .form-grid textarea, .form-grid select {
+.form-grid input,
+.form-grid textarea,
+.form-grid select {
   width: 100%;
   min-height: 42px;
   padding: 10px 12px;
@@ -715,7 +953,8 @@ tbody tr:nth-child(4) { background: #f8fafc; }
 
 .med-list { display: grid; gap: 10px; }
 
-.med-list article, .empty-note {
+.med-list article,
+.empty-note {
   margin: 0;
   padding: 14px;
   border: 1px solid var(--line);
@@ -743,25 +982,88 @@ tbody tr:nth-child(4) { background: #f8fafc; }
   cursor: pointer;
 }
 
+.module-card-section {
+  margin-top: 24px;
+}
+
+.module-section-title {
+  margin-bottom: 18px;
+}
+
+.module-section-title h3 {
+  margin: 0 0 6px;
+}
+
+.module-section-title p {
+  margin: 0;
+  color: var(--muted);
+}
+
 @media (max-width: 1050px) {
-  .login-view, .app-view, .dashboard-layout { grid-template-columns: 1fr; }
-  .login-brand { min-height: auto; padding-top: 112px; }
-  .copyright { position: static; margin-top: 48px; }
+  .login-view,
+  .app-view,
+  .dashboard-layout,
+  .ward-grid,
+  .modern-row,
+  .appointment-row,
+  .requisition-row,
+  .appointment-toolbar {
+    grid-template-columns: 1fr;
+  }
+
+  .login-brand {
+    min-height: auto;
+    padding-top: 112px;
+  }
+
+  .copyright {
+    position: static;
+    margin-top: 48px;
+  }
+
   .sidebar {
     position: relative;
     height: auto;
     width: 100%;
     min-width: 0;
   }
-  .side-nav { grid-template-columns: repeat(2, 1fr); padding-top: 16px; }
-  .sidebar-user, .logout-btn { display: none; }
-  .stat-grid { grid-template-columns: repeat(2, 1fr); }
+
+  .side-nav {
+    grid-template-columns: repeat(2, 1fr);
+    padding-top: 16px;
+  }
+
+  .sidebar-user,
+  .logout-btn {
+    display: none;
+  }
+
+  .stat-grid,
+  .ward-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media (max-width: 680px) {
-  .login-brand { padding: 96px 20px 32px; }
+  .login-brand {
+    padding: 96px 20px 32px;
+  }
+
   .brand-row-light { left: 20px; }
-  .care-stats, .stat-grid, .module-grid, .table-tools, .auth-name-grid, .form-grid { grid-template-columns: 1fr; }
+
+  .stat-grid,
+  .ward-stats,
+  .module-grid,
+  .table-tools,
+  .auth-name-grid,
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
   .form-grid .wide { grid-column: span 1; }
-  .login-panel-wrap, .content { padding: 20px; }
+
+  .login-panel-wrap,
+  .content {
+    padding: 20px;
+  }
 }
