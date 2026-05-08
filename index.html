@@ -13,18 +13,7 @@
   <main id="loginView" class="login-view">
     <section class="login-brand">
       <div class="brand-row brand-row-light">
-        <span class="logo logo-outline" aria-hidden="true">
-          <svg viewBox="0 0 24 24">
-            <path d="M6 21V5a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v16"/>
-            <path d="M4 21h16"/>
-            <path d="M9 8h6"/>
-            <path d="M12 5v6"/>
-            <path d="M9 14h2"/>
-            <path d="M13 14h2"/>
-            <path d="M9 18h2"/>
-            <path d="M13 18h2"/>
-          </svg>
-        </span>
+        <span class="logo logo-outline" data-icon="hospital" aria-hidden="true"></span>
         <div>
           <h1>Wellmeadows Hospital</h1>
           <p>Edinburgh Healthcare System</p>
@@ -33,71 +22,51 @@
 
       <div class="hospital-welcome">
         <h2>Welcome to Wellmeadows Hospital</h2>
-        <p>
-          Wellmeadows Hospital is located in Edinburgh and specializes in health care
-          for elderly people. This system supports patients, staff, wards, appointments,
-          medications, and supply requisitions.
-        </p>
-        <p>
-          The sample records follow the Wellmeadows Hospital case study, including
-          Ward 11 Orthopaedic, Moira Samuel, Anne Phelps, Robert MacDonald,
-          medication reports, and requisition records.
-        </p>
+        <p>Organized records for patients, staff, wards, appointments, and medications based on the Wellmeadows case study.</p>
+        <p>The system supports role-based access so staff can only work on modules assigned to their hospital responsibility.</p>
       </div>
 
       <p class="copyright">&copy; 2026 Wellmeadows Hospital. All rights reserved.</p>
     </section>
 
     <section class="login-panel-wrap">
-      <form class="login-card" id="authForm">
-        <span class="login-card-logo" aria-hidden="true">
-          <svg viewBox="0 0 24 24">
-            <path d="M6 21V5a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v16"/>
-            <path d="M4 21h16"/>
-            <path d="M9 8h6"/>
-            <path d="M12 5v6"/>
-            <path d="M9 14h2"/>
-            <path d="M13 14h2"/>
-            <path d="M9 18h2"/>
-            <path d="M13 18h2"/>
-          </svg>
-        </span>
-
-        <h2 id="authTitle">WELCOME TO WELLMEADOWS HOSPITAL</h2>
+      <form class="login-card" id="authForm" autocomplete="off">
+        <span class="login-card-logo" data-icon="hospital" aria-hidden="true"></span>
+        <h2 id="authTitle">Sign In</h2>
         <p id="authSubtitle">Sign in to your account</p>
 
-        <div class="auth-name-grid register-only">
+        <div class="auth-name-grid register-only hidden">
           <label>
             <span>First Name</span>
             <div class="input-shell">
-              <svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-              <input id="authFirstName" type="text" placeholder="John">
+              <span data-icon="user"></span>
+              <input id="authFirstName" type="text" placeholder="John" autocomplete="off">
             </div>
           </label>
           <label>
             <span>Last Name</span>
             <div class="input-shell">
-              <svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-              <input id="authLastName" type="text" placeholder="Smith">
+              <span data-icon="user"></span>
+              <input id="authLastName" type="text" placeholder="Smith" autocomplete="off">
             </div>
           </label>
         </div>
 
-        <label class="register-only">
+        <label class="register-only hidden">
           <span>Phone Number</span>
           <div class="input-shell">
-            <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.9.33 1.77.62 2.61a2 2 0 0 1-.45 2.11L8 9.72a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.84.29 1.72.5 2.62.62A2 2 0 0 1 22 16.92Z"/></svg>
-            <input id="authPhone" type="tel" placeholder="0131-XXX-XXXX">
+            <span data-icon="phone"></span>
+            <input id="authPhone" type="tel" placeholder="0131-XXX-XXXX" autocomplete="off">
           </div>
         </label>
 
-        <label class="register-only">
+        <label class="register-only hidden">
           <span>Role</span>
           <select id="authRole" class="auth-select">
-            <option>Staff Nurse</option>
-            <option>Charge Nurse</option>
             <option>Medical Director</option>
             <option>Personnel Officer</option>
+            <option>Charge Nurse</option>
+            <option>Staff Nurse</option>
             <option>Consultant</option>
           </select>
         </label>
@@ -105,47 +74,57 @@
         <label>
           <span>Email Address</span>
           <div class="input-shell">
-            <svg viewBox="0 0 24 24"><path d="M4 6h16v12H4z"/><path d="m4 7 8 6 8-6"/></svg>
-            <input id="authEmail" type="email" placeholder="john.smith@wellmeadows.com" required>
+            <span data-icon="mail"></span>
+            <input id="authEmail" type="email" placeholder="john.smith@wellmeadows.com" autocomplete="off" required>
           </div>
         </label>
 
         <label>
           <span>Password</span>
           <div class="input-shell">
-            <svg viewBox="0 0 24 24"><path d="M7 11V8a5 5 0 0 1 10 0v3"/><path d="M5 11h14v10H5z"/></svg>
-            <input id="authPassword" type="password" placeholder="********" required>
+            <span data-icon="lock"></span>
+            <input id="authPassword" type="password" placeholder="********" autocomplete="new-password" required>
           </div>
         </label>
 
         <div class="login-options login-only">
-          <label class="check-row"><input type="checkbox"> Remember me</label>
-          <a href="#">Forgot password?</a>
+          <label class="check-row">
+            <input id="rememberMe" type="checkbox">
+            <span>Remember me</span>
+          </label>
+          <a href="#" id="forgotPassword">Forgot password?</a>
+        </div>
+
+        <div class="social-login login-only">
+          <button type="button" data-social-login="Google">
+            <span class="social-logo google-logo">G</span>
+            <span>Continue with Google</span>
+          </button>
+
+          <button type="button" data-social-login="Microsoft">
+            <span class="social-logo microsoft-logo">
+              <i></i><i></i><i></i><i></i>
+            </span>
+            <span>Continue with Microsoft</span>
+          </button>
+
+          <button type="button" data-social-login="Hospital ID">
+            <span class="social-logo hospital-logo" data-icon="hospital"></span>
+            <span>Continue with Hospital ID</span>
+          </button>
         </div>
 
         <p class="auth-message" id="authMessage"></p>
         <button class="primary-btn" id="authSubmit" type="submit">Sign In</button>
         <p class="register-copy" id="authSwitchText">Don't have an account? <a href="#" id="authSwitch">Create Account</a></p>
-        <p class="demo-copy">Create an account first, then use that email and password to sign in.</p>
       </form>
     </section>
   </main>
 
   <main id="appView" class="app-view hidden">
     <aside class="sidebar">
-      <div class="brand-row">
-        <span class="logo" aria-hidden="true">
-  <svg viewBox="0 0 24 24">
-    <path d="M6 21V5a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v16"/>
-    <path d="M4 21h16"/>
-    <path d="M9 8h6"/>
-    <path d="M12 5v6"/>
-    <path d="M9 14h2"/>
-    <path d="M13 14h2"/>
-    <path d="M9 18h2"/>
-    <path d="M13 18h2"/>
-  </svg>
-</span>
+      <div class="brand-row sidebar-brand">
+        <span class="logo" data-icon="hospital" aria-hidden="true"></span>
         <div>
           <h1>Wellmeadows</h1>
           <p>Hospital System</p>
@@ -153,24 +132,23 @@
       </div>
 
       <nav class="side-nav">
-        <button class="nav-item active" data-page="dashboard"><svg viewBox="0 0 24 24"><path d="M4 4h6v6H4z"/><path d="M14 4h6v6h-6z"/><path d="M4 14h6v6H4z"/><path d="M14 14h6v6h-6z"/></svg> Dashboard</button>
-        <button class="nav-item" data-page="patients"><svg viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-8 0v2"/><circle cx="12" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/></svg> Patients</button>
-        <button class="nav-item" data-page="staff"><svg viewBox="0 0 24 24"><circle cx="9" cy="7" r="4"/><path d="M3 21v-2a4 4 0 0 1 4-4h4"/><path d="M17 11h4"/><path d="M19 9v4"/></svg> Staff</button>
-        <button class="nav-item" data-page="wards"><svg viewBox="0 0 24 24"><path d="M3 21h18"/><path d="M5 21V5h14v16"/><path d="M9 9h6"/><path d="M9 13h6"/></svg> Wards</button>
-        <button class="nav-item" data-page="appointments"><svg viewBox="0 0 24 24"><path d="M8 2v4"/><path d="M16 2v4"/><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M3 10h18"/></svg> Appointments</button>
-        <button class="nav-item" data-page="medications"><svg viewBox="0 0 24 24"><path d="M3 12h4l3 8 4-16 3 8h4"/></svg> Medications</button>
-        <button class="nav-item" data-page="supplies"><svg viewBox="0 0 24 24"><path d="m21 16-9 5-9-5V8l9-5 9 5v8Z"/><path d="M12 22V12"/></svg> Supplies</button>
+        <button class="nav-item active" data-page="dashboard"><span data-icon="dashboard"></span>Dashboard</button>
+        <button class="nav-item" data-page="patients"><span data-icon="patients"></span>Patients</button>
+        <button class="nav-item" data-page="staff"><span data-icon="staff"></span>Staff</button>
+        <button class="nav-item" data-page="wards"><span data-icon="wards"></span>Wards</button>
+        <button class="nav-item" data-page="appointments"><span data-icon="calendar"></span>Appointments</button>
+        <button class="nav-item" data-page="medications"><span data-icon="pulse"></span>Medications</button>
       </nav>
 
       <div class="sidebar-user">
-        <span class="avatar">DJS</span>
+        <span class="avatar" id="sidebarAvatar">DJS</span>
         <div>
           <strong id="sidebarName">Dr. John Smith</strong>
           <p id="sidebarRole">Medical Director</p>
         </div>
       </div>
 
-      <button class="logout-btn" id="logoutBtn"><svg viewBox="0 0 24 24"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><path d="m16 17 5-5-5-5"/><path d="M21 12H9"/></svg> Logout</button>
+      <button class="logout-btn" id="logoutBtn"><span data-icon="logout"></span>Logout</button>
     </aside>
 
     <section class="content">
@@ -183,33 +161,32 @@
         </header>
 
         <section class="stat-grid">
-          <article class="stat-card"><div><span>Total Patients</span><strong>186</strong><small>+12</small></div><b class="stat-icon blue"><svg viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-8 0v2"/><circle cx="12" cy="7" r="4"/></svg></b></article>
-          <article class="stat-card"><div><span>Occupied Beds</span><strong>203/240</strong><small>84%</small></div><b class="stat-icon green"><svg viewBox="0 0 24 24"><path d="M3 7v11"/><path d="M21 7v11"/><path d="M3 14h18"/><path d="M7 14V9h10v5"/></svg></b></article>
-          <article class="stat-card"><div><span>Today's Appointments</span><strong>24</strong><small>+3</small></div><b class="stat-icon purple"><svg viewBox="0 0 24 24"><path d="M8 2v4"/><path d="M16 2v4"/><rect x="3" y="4" width="18" height="18" rx="2"/></svg></b></article>
-          <article class="stat-card"><div><span>Staff on Duty</span><strong>142</strong><small>95%</small></div><b class="stat-icon orange"><svg viewBox="0 0 24 24"><circle cx="9" cy="7" r="4"/><path d="M17 11h4"/><path d="M19 9v4"/></svg></b></article>
+          <article class="stat-card"><div><span>Total Patients</span><strong>186</strong><small>+12</small></div><b class="stat-icon blue" data-icon="patients"></b></article>
+          <article class="stat-card"><div><span>Occupied Beds</span><strong>203/240</strong><small>84%</small></div><b class="stat-icon green" data-icon="bed"></b></article>
+          <article class="stat-card"><div><span>Today's Appointments</span><strong>24</strong><small>+3</small></div><b class="stat-icon purple" data-icon="calendar"></b></article>
+          <article class="stat-card"><div><span>Staff on Duty</span><strong>142</strong><small>95%</small></div><b class="stat-icon orange" data-icon="staff"></b></article>
         </section>
 
         <section class="dashboard-layout">
           <div>
             <h3>Quick Access Modules</h3>
             <div class="module-grid">
-              <button class="module-card" data-page="patients"><span class="stat-icon blue"><svg viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-8 0v2"/><circle cx="12" cy="7" r="4"/></svg></span><strong>Patient Management</strong><p>Register, update and manage patient records</p><small>186 patients</small></button>
-              <button class="module-card" data-page="staff"><span class="stat-icon green"><svg viewBox="0 0 24 24"><circle cx="9" cy="7" r="4"/><path d="M17 11h4"/><path d="M19 9v4"/></svg></span><strong>Staff Management</strong><p>Manage staff records, qualifications and schedules</p><small>142 staff members</small></button>
-              <button class="module-card" data-page="wards"><span class="stat-icon purple"><svg viewBox="0 0 24 24"><path d="M3 21h18"/><path d="M5 21V5h14v16"/><path d="M9 9h6"/></svg></span><strong>Ward Management</strong><p>Monitor ward capacity and bed allocation</p><small>17 wards</small></button>
-              <button class="module-card" data-page="appointments"><span class="stat-icon orange"><svg viewBox="0 0 24 24"><path d="M8 2v4"/><path d="M16 2v4"/><rect x="3" y="4" width="18" height="18" rx="2"/></svg></span><strong>Appointments</strong><p>Schedule and manage patient appointments</p><small>24 today</small></button>
-              <button class="module-card" data-page="medications"><span class="stat-icon red"><svg viewBox="0 0 24 24"><path d="M3 12h4l3 8 4-16 3 8h4"/></svg></span><strong>Medication Tracking</strong><p>Record and monitor patient medications</p><small>342 prescriptions</small></button>
-              <button class="module-card" data-page="supplies"><span class="stat-icon cyan"><svg viewBox="0 0 24 24"><path d="m21 16-9 5-9-5V8l9-5 9 5v8Z"/><path d="M12 22V12"/></svg></span><strong>Supply Requisitions</strong><p>Manage surgical and pharmaceutical supplies</p><small>48 pending</small></button>
+              <button class="module-card" data-page="patients"><span class="stat-icon blue" data-icon="patients"></span><strong>Patient Management</strong><p>Register, update and manage patient records</p><small>186 patients</small></button>
+              <button class="module-card" data-page="staff"><span class="stat-icon green" data-icon="staff"></span><strong>Staff Management</strong><p>Manage staff records, departments and schedules</p><small>142 staff members</small></button>
+              <button class="module-card" data-page="wards"><span class="stat-icon purple" data-icon="wards"></span><strong>Ward Management</strong><p>Monitor ward capacity and bed allocation</p><small>17 wards</small></button>
+              <button class="module-card" data-page="appointments"><span class="stat-icon orange" data-icon="calendar"></span><strong>Appointments</strong><p>Schedule and manage patient appointments</p><small>24 today</small></button>
+              <button class="module-card" data-page="medications"><span class="stat-icon red" data-icon="pulse"></span><strong>Medication Tracking</strong><p>Record and monitor patient medications</p><small>342 prescriptions</small></button>
             </div>
           </div>
 
           <aside>
             <h3>Recent Activity</h3>
             <div class="activity-card">
-              <article><strong>New patient registered</strong><span>Anne Phelps</span><small>21-Feb-95</small></article>
-              <article><strong>Medication prescribed</strong><span>Robert MacDonald</span><small>24-Mar-96</small></article>
-              <article><strong>Ward allocation updated</strong><span>Ward 11 - Orthopaedic</span><small>16-Jan-96</small></article>
-              <article><strong>Supply requisition approved</strong><span>Ward 11 - Orthopaedic</span><small>15-Feb-96</small></article>
-              <article><strong>Staff shift updated</strong><span>Moira Samuel</span><small>9-Jan-96</small></article>
+              <article><strong>New patient registered</strong><span>Anne Phelps</span><small>10 mins ago</small></article>
+              <article><strong>Medication prescribed</strong><span>Robert MacDonald</span><small>25 mins ago</small></article>
+              <article><strong>Ward transfer completed</strong><span>David Black</span><small>1 hour ago</small></article>
+              <article><strong>Appointment scheduled</strong><span>Ian Thompson</span><small>2 hours ago</small></article>
+              <article><strong>Staff shift updated</strong><span>Moira Samuel</span><small>3 hours ago</small></article>
             </div>
           </aside>
         </section>
@@ -221,12 +198,12 @@
             <h2>Patient Management</h2>
             <p>Manage patient records and information</p>
           </div>
-          <button class="primary-btn add-patient" id="addPatientBtn" type="button"><svg viewBox="0 0 24 24"><path d="M12 5v14"/><path d="M5 12h14"/></svg> Register Patient</button>
+          <button class="primary-btn add-patient" id="addPatientBtn" type="button"><span data-icon="plus"></span>Register Patient</button>
         </header>
 
         <section class="table-card">
           <div class="table-tools">
-            <div class="search-box"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg><input id="patientSearch" type="search" placeholder="Search by name or patient ID..."></div>
+            <div class="search-box"><span data-icon="search"></span><input id="patientSearch" type="search" placeholder="Search by name or patient ID, then press Enter..."></div>
             <select id="statusFilter">
               <option>All Status</option>
               <option>In-Patient</option>
@@ -254,7 +231,7 @@
         </section>
       </div>
 
-      <div id="placeholderPage" class="page hidden"></div>
+      <div id="modulePage" class="page hidden"></div>
     </section>
   </main>
 
@@ -265,7 +242,7 @@
           <h2 id="modalTitle">Patient Information</h2>
           <p id="modalSubtitle">Review patient details</p>
         </div>
-        <button class="modal-close" id="modalClose" type="button"><svg viewBox="0 0 24 24"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg></button>
+        <button class="modal-close" id="modalClose" type="button"><span data-icon="x"></span></button>
       </header>
 
       <form id="patientForm" class="patient-form">
@@ -274,37 +251,41 @@
           <label><span>Patient ID</span><input id="modalPatientId" readonly></label>
           <label><span>First Name</span><input id="modalFirstName" required></label>
           <label><span>Last Name</span><input id="modalLastName" required></label>
-          <label><span>Date of Birth</span><input id="modalDob"></label>
-          <label><span>Sex</span><select id="modalSex"><option>Female</option><option>Male</option></select></label>
-          <label><span>Marital Status</span><input id="modalMarital"></label>
+          <label><span>Date of Birth</span><input id="modalDob" type="date"></label>
+
+          <label><span>Sex</span><select id="modalSex"><option value="">Select sex</option><option>N/A</option><option>Female</option><option>Male</option></select></label>
+          <label><span>Marital Status</span><select id="modalMarital"><option value="">Select marital status</option><option>N/A</option><option>Single</option><option>Married</option><option>Widowed</option><option>Divorced</option></select></label>
+
           <label class="wide"><span>Address</span><textarea id="modalAddress" rows="2"></textarea></label>
           <label><span>Telephone</span><input id="modalPhone"></label>
-          <label><span>Date Registered</span><input id="modalRegistered"></label>
-          <label><span>Status</span><select id="modalStatus"><option>In-Patient</option><option>Out-Patient</option><option>Waiting List</option></select></label>
-          <label><span>Ward Required / Ward</span><input id="modalWard"></label>
-          <label><span>Bed Number</span><input id="modalBed"></label>
-          <label><span>Waiting List Date</span><input id="modalWaitingDate"></label>
-          <label><span>Expected Stay</span><input id="modalStay"></label>
-          <label><span>Date Placed</span><input id="modalDatePlaced"></label>
-          <label><span>Date Leave</span><input id="modalDateLeave"></label>
+          <label><span>Date Registered</span><input id="modalRegistered" type="date"></label>
+
+          <label><span>Status</span><select id="modalStatus"><option value="">Select status</option><option>N/A</option><option>In-Patient</option><option>Out-Patient</option><option>Waiting List</option></select></label>
+          <label><span>Ward Required / Ward</span><select id="modalWard"><option value="">Select ward</option><option>N/A</option><option>Ward 11 - Orthopaedic</option><option>Ward 12 - Cardiology</option><option>Ward 13 - Geriatric</option><option>Ward 14 - Respiratory</option><option>Ward 15 - Neurology</option><option>Ward 16 - General Medical</option><option>Out-Patient Clinic</option><option>Pending - Ward 11</option></select></label>
+          <label><span>Bed Number</span><select id="modalBed"><option value="">Select bed</option><option>N/A</option><option>Bed 79</option><option>Bed 80</option><option>Bed 84</option><option>Bed 87</option></select></label>
+
+          <label><span>Waiting List Date</span><input id="modalWaitingDate" type="date"></label>
+          <label><span>Expected Stay</span><input id="modalStay" placeholder="N/A"></label>
+          <label><span>Date Placed</span><input id="modalDatePlaced" type="date"></label>
+          <label><span>Date Leave</span><input id="modalDateLeave" type="date"></label>
         </div>
 
         <section class="detail-section">
           <h3>Next-of-Kin Details</h3>
           <div class="form-grid">
-            <label><span>Full Name</span><input id="modalKinName"></label>
-            <label><span>Relationship</span><input id="modalKinRelationship"></label>
-            <label class="wide"><span>Address</span><textarea id="modalKinAddress" rows="2"></textarea></label>
-            <label><span>Telephone</span><input id="modalKinPhone"></label>
+            <label><span>Full Name</span><input id="modalKinName" placeholder="N/A"></label>
+            <label><span>Relationship</span><input id="modalKinRelationship" placeholder="N/A"></label>
+            <label class="wide"><span>Address</span><textarea id="modalKinAddress" rows="2" placeholder="N/A"></textarea></label>
+            <label><span>Telephone</span><input id="modalKinPhone" placeholder="N/A"></label>
           </div>
         </section>
 
         <section class="detail-section">
           <h3>Local Doctor Details</h3>
           <div class="form-grid">
-            <label><span>Full Name</span><input id="modalDoctorName"></label>
-            <label class="wide"><span>Address</span><textarea id="modalDoctorAddress" rows="2"></textarea></label>
-            <label><span>Telephone</span><input id="modalDoctorPhone"></label>
+            <label><span>Doctor</span><select id="modalDoctorName"><option value="">Select doctor</option><option>N/A</option><option>Dr. Helen Pearson</option><option>Dr. Laurence Burns</option><option>Dr. John Smith</option><option>Local doctor referral</option></select></label>
+            <label class="wide"><span>Address</span><textarea id="modalDoctorAddress" rows="2" placeholder="N/A"></textarea></label>
+            <label><span>Telephone</span><input id="modalDoctorPhone" placeholder="N/A"></label>
           </div>
         </section>
 
@@ -314,8 +295,53 @@
         </section>
 
         <footer class="modal-actions">
+          <button class="danger-btn" id="modalDelete" type="button">Delete</button>
+          <span class="action-spacer"></span>
+          <button class="secondary-btn" id="modalDone" type="button">Done</button>
           <button class="secondary-btn" id="modalCancel" type="button">Cancel</button>
           <button class="primary-btn" id="modalSave" type="submit">Save Changes</button>
+        </footer>
+      </form>
+    </div>
+  </div>
+
+  <div class="modal hidden" id="recordModal">
+    <div class="modal-card compact">
+      <header class="modal-header">
+        <div>
+          <h2 id="recordTitle">Record</h2>
+          <p id="recordSubtitle">Add new record</p>
+        </div>
+        <button class="modal-close" id="recordClose" type="button"><span data-icon="x"></span></button>
+      </header>
+
+      <form id="recordForm" class="patient-form">
+        <div class="form-grid" id="recordFields"></div>
+        <footer class="modal-actions">
+          <button class="secondary-btn" id="recordCancel" type="button">Cancel</button>
+          <button class="primary-btn" type="submit">Save Record</button>
+        </footer>
+      </form>
+    </div>
+  </div>
+
+  <div class="modal hidden" id="socialModal">
+    <div class="modal-card compact">
+      <header class="modal-header">
+        <div>
+          <h2 id="socialTitle">Continue Account</h2>
+          <p id="socialSubtitle">Fill up the needed hospital access details.</p>
+        </div>
+        <button class="modal-close" id="socialClose" type="button"><span data-icon="x"></span></button>
+      </header>
+
+      <form id="socialForm" class="patient-form">
+        <input type="hidden" id="socialProvider">
+        <div class="form-grid" id="socialFields"></div>
+
+        <footer class="modal-actions">
+          <button class="secondary-btn" id="socialCancel" type="button">Cancel</button>
+          <button class="primary-btn" type="submit">Continue</button>
         </footer>
       </form>
     </div>
