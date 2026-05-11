@@ -623,6 +623,7 @@ function renderWardsPage() {
       ${wards.map(ward => {
         const percent = Math.round((ward.occupied / ward.capacity) * 100);
         const bar = percent >= 90 ? "hot" : percent >= 75 ? "" : "ok";
+        const style = `width: ${percent}%;`;
         return `
           <article class="ward-card" data-ward-number="${ward.number}" style="cursor:pointer">
             <div class="ward-top">
@@ -636,7 +637,7 @@ function renderWardsPage() {
               </div>
               <div class="occupancy">
                 <div class="occupancy-head"><span>Bed Occupancy</span><strong>${ward.occupied} / ${ward.capacity}</strong></div>
-                <div class="progress"><i class="${bar}" style="width:${percent}%"></i></div>
+                <div class="progress"><i class="${bar}" data-percent="${percent}"></i></div>
                 <small>${ward.capacity - ward.occupied} beds available</small>
               </div>
               <div class="ward-stats">
